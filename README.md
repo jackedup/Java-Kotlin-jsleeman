@@ -1,5 +1,5 @@
 # Jack Sleeman Java + Kotlin
-#jsleeman@mavs.coloradomesa.edu
+# jsleeman@mavs.coloradomesa.edu
 ## Assignments
 | Assignment |   Link   |   Notes  |
 |-----------:|:--------:|:---------|
