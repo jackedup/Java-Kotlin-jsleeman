@@ -3,4 +3,4 @@
 ## Assignments
 | Assignment |   Link   |   Notes  |
 |-----------:|:--------:|:---------|
-| 1. Hello World | [Hello] (https://google.com) | Hello World Test |
+| 1. Hello World | [Hello](https://google.com) | Hello World Test |
