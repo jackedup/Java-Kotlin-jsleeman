@@ -3,4 +3,5 @@
 ## Assignments
 | Assignment |   Link   |   Notes  |
 |-----------:|:--------:|:---------|
-| 1. Unit Test | [Unit Test](https://github.com/jackedup/Kotlin-jsleeman/tree/master/Unit%20Test) | Testing concatenation |
+| 1. Hello World | [Hello World](https://github.com/jackedup/Java-Kotlin-jsleeman/tree/master/HelloWorld) | Initial Commit of Hello World |
+
