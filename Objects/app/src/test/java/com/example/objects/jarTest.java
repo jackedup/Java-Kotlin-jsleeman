@@ -8,6 +8,9 @@ public class jarTest {
 
     @Test
     public void getCapacity() {
+        double capacity = 12.2;
+        jar instance = new jar(12.2);
+        assertEquals(capacity, instance.getCapacity(), 0.0);
     }
 
     @Test
