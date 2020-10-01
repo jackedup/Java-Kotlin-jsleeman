@@ -16,7 +16,8 @@ public class JellyJar extends DefaultJar{
     public void setJellyLevel(double JellyLevel){
         setFluidLevel(JellyLevel);
     }
-    public boolean isSpoiled(){
+
+    public boolean getSpoiled(){
         return spoiled;
     }
     public void setSpoiled(boolean spoiled){

@@ -1,6 +1,8 @@
 package com.example.objects;
 
 import java.util.ArrayList;
+import java.util.Random;
+
 public class MayoJar extends DefaultJar{
     interface Mold{
         boolean isMoldHere(double height);
@@ -19,23 +21,37 @@ public class MayoJar extends DefaultJar{
                     height > lowerMoldHeight;
         }
     }
-    public class MoldyMayo implements Mold{
-         public boolean isMoldHere(double junk){return true;}
-    }
 
-    ArrayList< Mold > Molds = new ArrayList<Mold>();
+    ArrayList< Mold > Molds = new ArrayList<>();
 
     public MayoJar(double capacity) {
         super(capacity);
-        Molds.add(new MoldyArea(0.2,3.0));
+        Random rand = new Random();
+        double hi = rand.nextDouble() * capacity;
+        double lo = rand.nextDouble()* capacity;
+        double temp;
+        if(hi < lo){temp = lo; lo = hi; hi = temp;}
+        Molds.add(new MoldyArea(lo,hi));
     }
 
     public MayoJar(double capacity, double fluidLevel) {
         super(capacity, fluidLevel);
+        Random rand = new Random();
+        double hi = rand.nextDouble() * capacity;
+        double lo = rand.nextDouble()* capacity;
+        double temp;
+        if(hi < lo){temp = lo; lo = hi; hi = temp;}
+        Molds.add(new MoldyArea(lo,hi));
     }
 
     public MayoJar(double capacity, double fluidLevel, boolean isLidOn) {
         super(capacity, fluidLevel, isLidOn);
+        Random rand = new Random();
+        double hi = rand.nextDouble() * capacity;
+        double lo = rand.nextDouble()* capacity;
+        double temp;
+        if(hi < lo){temp = lo; lo = hi; hi = temp;}
+        Molds.add(new MoldyArea(lo,hi));
     }
     public void setMayoLevel(double mayoLevel){
         setFluidLevel(mayoLevel);
