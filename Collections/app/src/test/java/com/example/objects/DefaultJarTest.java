@@ -96,4 +96,18 @@ public class DefaultJarTest {
         DefaultJar instance = new DefaultJar(10.0);
         instance.setOwner(null);
     }
+    //test is relatively comprehensive to prove the workaround for compareto works
+    @Test
+    public void compareTo(){
+        DefaultJar instance = new DefaultJar(10.0, 5.0);
+        DefaultJar instance2 = new DefaultJar(10.0, 5.2);
+        DefaultJar instance3 = new DefaultJar(10.0, 5.4);
+        DefaultJar instance4 = new DefaultJar(10.0, 5.4);
+        DefaultJar instance5 = new DefaultJar(10.0, 5.6);
+
+        assertTrue(instance.compareTo(instance2) < 0);
+        assertTrue(instance2.compareTo(instance) > 0);
+        assertTrue(instance3.compareTo(instance4) == 0);
+        assertTrue(instance.compareTo(instance5) < 0);
+    }
 }

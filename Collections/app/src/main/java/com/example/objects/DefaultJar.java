@@ -1,6 +1,8 @@
 package com.example.objects;
 
-public class DefaultJar implements Jar{
+import android.view.ViewDebug;
+
+public class DefaultJar implements Jar, Comparable<DefaultJar>{
 
     private static double checkCapacity(double capacity){
         if (capacity > 0) {
@@ -87,6 +89,14 @@ public class DefaultJar implements Jar{
         this.fluidLevel = checkLevel(fluidLevel, capacity);
         this.isLidOn = isLidOn;
         this.owner = "";
+    }
+
+    //Implementing compareto
+    @Override
+    public int compareTo(DefaultJar o) {
+        int d = Double.compare(this.getFluidLevel(), o.getFluidLevel());
+        return d;
+
     }
 
 }
