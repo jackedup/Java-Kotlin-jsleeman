@@ -25,42 +25,48 @@ public class KattisBus {
     }
     int busnum;
     String [] busesstr;
-    int [] busesint = new int[1000];
+    int [] busesint;
 
     String[] command = new String[0];
     public void doCommand() {
 
         Arrays.sort(busesint);
         int endbus = 0;
-        for (int i = 0; i < busnum - 2; i++){
+        int i;
+        for (i = 0; i < busnum; i++) {
             int currentbus = busesint[i];
-            int k =1;
-            for (int j = currentbus; j< busnum; j++) {
-                while (currentbus == busesint[j] + k) {
-                    endbus = busesint[j];
+            int k = 1;
+            boolean done = false;
+            if (i + k <= busnum && !done) {
+                while (currentbus + k == busesint[i + k]) {
+                    endbus = busesint[k];
                     k++;
                 }
-                if(k > 1) {
-                    out.print(currentbus + "-" + endbus + " ");
-                    i +=k;
+                if (k > 2) {
+
+                    out.print(currentbus + "-" + endbus);
+                    i += k -1;
+                } else {
+                    out.print(currentbus);
+                    done = true;
                 }
-                else out.print(currentbus + " ");
-
-            }
+            }else{ out.print(currentbus); }
+            if (i < busnum -1){
+                out.print(" ");
+            }else out.print("\n");
         }
-
     }
     public boolean readCommand() {
         if (in.hasNextLine()) {
+
             String line = in.nextLine();
             busnum = Integer.parseInt(line);
+            busesint = new int[busnum];
             if (in.hasNextLine()) {
                 line = in.nextLine();
                 busesstr = line.split(" ");
             }
             for(int i = 0; i < busnum; i++){
-                System.out.println(busesstr[i]);
-                System.out.println(i);
                 busesint[i] = Integer.parseInt(busesstr[i]);
             }
             return true;
