@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Drink Reminder</string>
+    <string name="channel_name">yes</string>
+    <string name="channel_description">yes</string>
+    <string name="button">Button</string>
+    <string name="fdbutton">Remindme</string>
+</resources>
