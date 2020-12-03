@@ -8,5 +8,5 @@
 | 3. Class Hierarchy| [Class Hierarchy](https://github.com/jackedup/Java-Kotlin-jsleeman/tree/master/ClassHierarchy)| Object Hierarchy with full coverage testing |
 | 4. Collections| [Collections](https://github.com/jackedup/Java-Kotlin-jsleeman/tree/master/Collections)| Use of Collections |
 | 5. Simple App| [APP](https://github.com/jackedup/Java-Kotlin-jsleeman/new/master/SimpleApp)| App that changes text |
-
+| 6. Hydration Reminder| [Hydration App](https://github.com/jackedup/Java-Kotlin-jsleeman/tree/master/DrinkReminder)| App that changes reminds you to hydrate |
 
